@@ -3,12 +3,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT;
+const port = 5000;
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+
 mongoose
-  .connect(process.env.MONGO_LOCAL, {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -27,7 +28,7 @@ const StorySchema = new mongoose.Schema({
 const storyDB = mongoose.model("shortstorydb", StorySchema);
 
 const openai = new OpenAI({
-  apiKey: process.env.API_KEY,
+  apiKey:process.env.API_KEY,
 });
 
 app.use(express.json());
@@ -101,6 +102,21 @@ app.post("/updatelike", (req, res) => {
       res.status(500).json({ error: "Error updating likemetre" });
     });
 });
+app.get('/leaderboard', (req, res) => {
+  storyDB
+    .find({})
+    .sort({ likemetre: -1 })
+    .then(data => {
+      console.log("Data sent to client:", data);
+      res.json(data || []);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: "Error fetching data from the database" });
+    });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

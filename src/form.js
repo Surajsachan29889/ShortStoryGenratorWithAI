@@ -9,9 +9,10 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import SaveIcon from "@mui/icons-material/Save";
 import ShareIcon from "@mui/icons-material/Share";
 import CustomizedSlider from "./components/upvoteslider";
+import Button from '@mui/material/Button';
 
 export default function Form() {
-  const backendUrl = "http://localhost:4000";
+  const backendUrl = "http://localhost:5000";
   const [userInput, setUserInput] = useState("");
   const [generatedStory, setGeneratedStory] = useState("");
   const [error, setError] = useState(null);
@@ -206,7 +207,10 @@ export default function Form() {
       <div className="input-field">
         <div className="bg-[red] h-[35%] w-[25%] absolute top-[30%] left-[-20%] blur-[100px]"></div>
         <div className="bg-[#7ADEDE] h-[35%] w-[4%] absolute top-[30%] right-[2%] blur-[60px]"></div>
+        <Button variant="contained" className="absolute left-[73%] top-[85%]"><a href="/leaderboard">Leaderboard</a></Button>
         <div className="grid grid-cols-2 ml-[31%] mxl-8 w-[40%]">
+
+        
           <div style={{ color: "green" }}>
             <Prompt
               icon="fa-solid fa-tree"
@@ -313,6 +317,7 @@ export default function Form() {
                 ))}
               </SpeedDial>
             </Box>
+            
           </div>
         </div>
       )}

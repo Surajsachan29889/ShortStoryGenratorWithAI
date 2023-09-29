@@ -1,6 +1,6 @@
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -66,6 +66,7 @@ body{
 
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
 .heading h1 span{
       color: #D4B5B5;
 }
@@ -76,4 +77,16 @@ body{
   font-family: 'Croissant One', cursive;
   color: whitesmoke;
 }
-
+.lead-heading{
+  font-family: 'Roboto Slab', serif;
+}
+.leader-container{
+  background: linear-gradient(315deg, #8496ED 0%, #8496ED 25%, rgb(236, 236, 236) 25%, rgb(215, 215, 215) 75%,  #EB565C 75%, #EB565C 100%);
+}
+.showcase{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.leadercompo{
+  background-image: linear-gradient(to right, #768DF6 , #a8b8fecd);
+  font-family: 'Croissant One', cursive;
+}
