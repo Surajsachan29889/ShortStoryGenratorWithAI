@@ -29,7 +29,7 @@ export default function Leadercompo() {
         <div key={index} className=" leadercompo w-[100%] h-[15vh] rounded-3xl mt-[8%] flex flex-row ">
             <h1 className='text-[500%] left-[5%] absolute font-extrabold text-[white]'>{index+1}</h1>
           <h1 className='text-[300%] left-[20%] absolute font-extrabold text-[white] mt-[20px] '>{item.prompt}</h1>
-          <h1 className='text-[350%] right-[5%] absolute font-extrabold text-[#000000] mt-[20px]'>{item.likemetre}/100    </h1>
+          <h1 className='text-[350%] right-[5%] absolute font-extrabold text-[#000000] mt-[20px]'>{item.likemetre}/100</h1>
         </div>
       ))}
     </div>

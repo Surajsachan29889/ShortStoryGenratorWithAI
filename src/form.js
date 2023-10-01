@@ -207,8 +207,7 @@ export default function Form() {
       <div className="input-field">
         <div className="bg-[red] h-[35%] w-[25%] absolute top-[30%] left-[-20%] blur-[100px]"></div>
         <div className="bg-[#7ADEDE] h-[35%] w-[4%] absolute top-[30%] right-[2%] blur-[60px]"></div>
-        <Button variant="contained" className="absolute left-[73%] top-[85%]"><a href="/leaderboard">Leaderboard</a></Button>
-        <div className="grid grid-cols-2 ml-[31%] mxl-8 w-[40%]">
+        <div className="grid grid-cols-2 sm:ml-[31%] mxl-8 w-[40%]">
 
         
           <div style={{ color: "green" }}>
@@ -224,7 +223,7 @@ export default function Form() {
               icon="fa-brands fa-space-awesome"
               text="Science Fiction"
               para="Story About Science"
-              onClick={() => handlePrompt("Scinece Fiction")}
+              onClick={() => handlePrompt("Science Fiction")}
             />
           </div>
           <div style={{ color: "brown" }}>
@@ -258,6 +257,7 @@ export default function Form() {
           />
         </div>
       </div>
+
       <button className="submit-btn" onClick={generateStory}>
         <i className="fa-solid fa-paper-plane"></i>
       </button>
@@ -277,6 +277,7 @@ export default function Form() {
                 value={sliderValue}
                 onChange={handleSliderChange}
               />
+
             </div>
           )}
           <div>
@@ -319,6 +320,8 @@ export default function Form() {
             </Box>
             
           </div>
+          <Button variant="contained" className="absolute left-[75%]"><a href="/leaderboard" target="_blank">Leaderboard</a></Button>
+
         </div>
       )}
 

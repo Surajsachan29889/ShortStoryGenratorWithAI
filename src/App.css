@@ -33,7 +33,7 @@ body{
 .input-field input::placeholder{
   font-weight: 900;
   opacity: .5;
-  font-size: large;
+  font-size: 1.5vw;
 
 }
   
@@ -89,4 +89,19 @@ body{
 .leadercompo{
   background-image: linear-gradient(to right, #768DF6 , #a8b8fecd);
   font-family: 'Croissant One', cursive;
+}
+@media(max-width:800px){
+  .prompt p{
+    display: none;
+  }
+  .prompt{
+    width: 200%;
+    height: 10%;
+    margin-left: 2%;
+    
+  }
+  .input-field input{
+    height: 6vh;
+  }
+  
 }
