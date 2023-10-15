@@ -28,7 +28,7 @@ const StorySchema = new mongoose.Schema({
 const storyDB = mongoose.model("shortstorydb", StorySchema);
 
 const openai = new OpenAI({
-  apiKey:process.env.API_KEY,
+  apiKey:process.env.API_KEY || "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",
 });
 
 app.use(express.json());
