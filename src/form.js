@@ -12,7 +12,7 @@ import CustomizedSlider from "./components/upvoteslider";
 import Button from '@mui/material/Button';
 
 export default function Form() {
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "http://localhost:5000" || "http://3.6.15.101:5000/";
   const [userInput, setUserInput] = useState("");
   const [generatedStory, setGeneratedStory] = useState("");
   const [error, setError] = useState(null);
