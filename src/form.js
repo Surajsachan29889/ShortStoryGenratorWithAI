@@ -207,6 +207,8 @@ export default function Form() {
       <div className="input-field">
         <div className="bg-[red] h-[35%] w-[25%] absolute top-[30%] left-[-20%] blur-[100px]"></div>
         <div className="bg-[#7ADEDE] h-[35%] w-[4%] absolute top-[30%] right-[2%] blur-[60px]"></div>
+        <Button variant="contained" className=" leader-btn absolute left-[75%]"><a href="/leaderboard" target="_blank">Leaderboard</a></Button>
+
         <div className="grid grid-cols-2 sm:ml-[31%] mxl-8 w-[40%]">
 
         
@@ -320,7 +322,6 @@ export default function Form() {
             </Box>
             
           </div>
-          <Button variant="contained" className="absolute left-[75%]"><a href="/leaderboard" target="_blank">Leaderboard</a></Button>
 
         </div>
       )}
